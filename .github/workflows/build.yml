@@ -28,6 +28,6 @@ jobs:
         run: |
           git add dist -f
           git commit -m 'update dist subtree'
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "jobyl"
+          git config user.email "jonas.byle@ugent.be"
           git subtree push --prefix dist origin gh-pages
