@@ -31,4 +31,5 @@ jobs:
             git config --global user.email "actions@github.com"
             git add dist -f
             git commit -m 'update dist subtree'
-            git subtree push --prefix --force dist origin gh-pages
+            git branch -D gh-pages
+            git subtree push --prefix dist origin gh-pages
