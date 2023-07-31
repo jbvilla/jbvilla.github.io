@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest  # runner environment
-    environment: dist
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,6 +24,8 @@ jobs:
         run: npm run build
 
       - name: Copy dist folder to dist branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.DIST }}
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
