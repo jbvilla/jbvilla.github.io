@@ -26,8 +26,8 @@ jobs:
 
       - name: Copy dist folder to dist branch
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "jbvilla"
+          git config --global user.email "jonasbyle12@gmail.com"
           git add dist -f
           git commit -m 'update dist subtree'
           git subtree push --prefix dist origin gh-pages
