@@ -20,17 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Remove existing dist folder
-        env:
-          GITHUB_TOKEN: ${{ secrets.DIST_TOKENN }}
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git checkout gh-pages
-          git rm -rf .
-          git commit -m "Remove old dist folder"
-          git checkout main
-
       - name: Build
         run: npm run build
 
