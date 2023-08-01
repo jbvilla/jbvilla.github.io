@@ -29,7 +29,6 @@ jobs:
       - name: Pull existing dist branch
         run: git pull origin gh-pages
 
-
       - name: Build
         run: npm run build
 
