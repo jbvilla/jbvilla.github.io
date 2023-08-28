@@ -27,8 +27,8 @@ export default {
     age() {
       const today = new Date();
       const age = today.getFullYear() - this.birthdate.getFullYear();
-      const month = today.getMonth() - this.birthdate.getMonth();
-      if (month < 0 || (month === 0 && today.getDate() < this.birthdate.getDate())) {
+      const day = today.getDay() - this.birthdate.getDay();
+      if (day < this.birthdate.getDay()) {
         return age - 1;
       }
       return age;
